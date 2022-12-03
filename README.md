@@ -1,6 +1,6 @@
 # Evil-Eye-Banner
 
-Command list
+## Command list ##
 
 pkg update
 

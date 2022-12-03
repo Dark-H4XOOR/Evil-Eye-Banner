@@ -1,3 +1,6 @@
+#Dark-H4XOOR
+
+
 #color
 r='\e[1;31m'
 g='\e[1;32m'
@@ -10,43 +13,43 @@ lb='\e[1;36m'
 
 
 echo
-echo -e $lb "███████╗░░░░░░██████╗░░█████╗░███╗░░██╗███╗░░██╗███████╗██████╗░"
-echo -e $lb "██╔════╝░░░░░░██╔══██╗██╔══██╗████╗░██║████╗░██║██╔════╝██╔══██╗"
-echo -e $lb "█████╗░░█████╗██████╦╝███████║██╔██╗██║██╔██╗██║█████╗░░██████╔"
-echo -e $lb "██╔══╝░░╚════╝██╔══██╗██╔══██║██║╚████║██║╚████║██╔══╝░░██╔══██╗"
-echo -e $lb "███████╗░░░░░░██████╦╝██║░░██║██║░╚███║██║░╚███║███████╗██║░░██║"
-echo -e $ib "╚══════╝░░░░░░╚═════╝░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚══╝╚══════╝╚═╝░░╚═╝"
-echo -e $r  "                                         Tool by - Dark Virus"
+echo -e $lb "███████╗    ██████╗  █████╗ ███╗  ██╗███╗  ██╗███████╗██████╗" 
+echo -e $lb "██╔════╝    ██╔══██╗██╔══██╗████╗ ██║████╗ ██║██╔════╝██╔══██╗"
+echo -e $lb "█████╗  ███╗██████╦╝███████║██╔██╗██║██╔██╗██║█████╗  ██████╔╝"
+echo -e $lb "██╔══╝  ╚══╝██╔══██╗██╔══██║██║╚████║██║╚████║██╔══╝  ██╔══██╗"
+echo -e $lb "███████╗    ██████╦╝██║  ██║██║ ╚███║██║ ╚███║███████╗██║  ██║"
+echo -e $lb "╚══════╝    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚══╝╚═╝  ╚══╝╚══════╝╚═╝  ╚═╝"
+echo -e $r  "                                  Tool by - Dark Virus"
 echo
-echo "What is Your Banner Name ? : \c"
-read Bname
+echo -e $y "What is Your Banner name ? : \c"
+read varBname
 echo 
-echo "What is Your Name ? : \c"
-read name
+echo -e $y "What is Your name ? : \c"
+read varname
 
-echo "cowsay -f eyes "$name" | lolcat " > name.txt
-echo "figlet "$Bname" | lolcat " > Bname.txt
+echo "cowsay -f eyes "$varname" | lolcat " > name.txt
+echo "figlet "$varBname" | lolcat" > Bname.txt
 echo "clear" > clear.txt
-echo "PS1-'\$ ' " > Temp.txt
+echo "PS1='\$ '" > Temp.txt
 
 
-#remove old files
+#remove old files 
 rm -rf /data/data/com.termux/files/usr/etc/zshrc
 rm -rf /data/data/com.termux/files/usr/etc/bash.bashrc
 
-#inject files to zshrc
+# inject files to zshrc
 cat "clear.txt" >> /data/data/com.termux/files/usr/etc/zshrc
 cat "name.txt" >> /data/data/com.termux/files/usr/etc/zshrc
-cat "Bname.txt" >> /data/data/com.termux/files/usr/etc/zshrc 
+cat "Bname.txt" >> /data/data/com.termux/files/usr/etc/zshrc
 cat "Temp.txt" >> /data/data/com.termux/files/usr/etc/zshrc
 
-#inject files to bash.bashrc
+# inject files to bash.bashrc
 cat "clear.txt" >> /data/data/com.termux/files/usr/etc/bash.bashrc
 cat "name.txt" >> /data/data/com.termux/files/usr/etc/bash.bashrc
 cat "Bname.txt" >> /data/data/com.termux/files/usr/etc/bash.bashrc
 cat "Temp.txt" >> /data/data/com.termux/files/usr/etc/bash.bashrc
 
-rm -rf name.txt Bname.txt clear.txt Temp.txt
+rm -rf name.txt Baname.txt clear.txt Temp.txt
 echo
 figlet Finish | lolcat
-echo -e $r "Please Restart Your Termux or Terminal "
+echo -e $r "Please Restart Your Termux"
